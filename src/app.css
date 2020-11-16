@@ -1,0 +1,173 @@
+.app {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+/***************** Sidebar ******************/
+
+.sidebar {
+    border-right: 1px solid #384153;
+    display: grid;
+    grid-template-rows: 45px 1fr;
+}
+
+/***************** Sidebar Header ******************/
+
+.sidebar-header {
+    padding: 10px 18px;
+    border-bottom: 1px solid #384153;
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 1fr auto auto;
+}
+
+.sidebar-header * {
+    margin: auto 0;
+}
+
+.sidebar-header abbr {
+    cursor: pointer;
+}
+
+.sidebar-header abbr:hover {
+    color: #fff;
+}
+
+/**************** Sidebar Treeview ****************/
+
+.treeview {
+    padding: 10px;
+    max-width: 100%;
+}
+
+/**************** Treeview Doc & Dir Name ****************/
+
+.treeview .doc, .treeview .dir-name {
+    padding: 7px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 2px;
+    display: grid;
+    grid-gap: 7px;
+    grid-template-columns: 18px 1fr auto;
+}
+
+.treeview .doc:hover, .treeview .dir-name:hover, .treeview .doc.selected {
+    background-color: #171724;
+}
+
+.treeview .doc *, .treeview .dir-name * {
+    margin: auto 0;
+    transition: .2s;
+}
+
+.treeview .doc i, .treeview .dir-name i {
+    margin: auto;
+}
+
+.treeview .doc input, .treeview .dir-name input {
+    color: #6B7382;
+    font-size: 14px;
+    width: 100%;
+}
+
+.treeview .doc:hover input, .treeview .dir-name:hover input {
+    color: #fff;
+}
+
+.treeview .doc .options {
+    opacity: 0;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, auto);
+}
+
+.treeview .dir-name .options {
+    opacity: 0;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, auto);
+}
+
+.treeview .doc:hover .options, .treeview .dir-name:hover .options{
+    opacity: 1;
+}
+
+.treeview .doc .options abbr, .treeview .dir-name .options abbr {
+    cursor: pointer;
+}
+
+.treeview .doc .options abbr:hover, .treeview .dir-name .options abbr:hover {
+    color: #fff;
+}
+
+/*************** Dir Wrapper ****************/
+
+.dir-wrapper {
+    width: auto;
+}
+
+/************** Dir ****************/
+
+.dir {
+    display: none;
+    padding-top: 2px;
+    padding-left: 10px;
+}
+
+.dir.open {
+    display: block;
+}
+
+/**************** workarea ****************/
+
+.workarea {
+    display: grid;
+    grid-template-rows: 45px 1fr;
+}
+
+/**************** workarea tabs ****************/
+
+.tabs {
+    border-bottom: 1px solid #384153;
+    display: flex;
+}
+
+.tab {
+    height: 100%;
+    width: fit-content;
+    padding: 0 4px 0 8px;
+    border-right: 1px solid #384153;
+    cursor: pointer;
+    color: #6B7382;
+    display: grid;
+    grid-gap: 4px;
+    grid-template-columns: 1fr auto;
+}
+
+.tab * {
+    transition: .2s;
+}
+
+.tab abbr {
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+.tab abbr:hover {
+    background-color: #384153;
+}
+
+.tab abbr, .tab span {
+    margin: auto;
+}
+
+.tab.editorOpen {
+    border-bottom: 1px solid #76D6FF;
+}
+
+.tab:hover abbr, .tab:hover span, .tab.editorOpen abbr, .tab.editorOpen span {
+    color: #fff;
+}

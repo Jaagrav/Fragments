@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #252535;
+    color: #76D6FF;
+}
+
+body * {
+    font-family: Poppins, sans-serif;
+    text-decoration: none;
+}
+
+input[type="text"] {
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+input[type="text"]:read-only {
+    cursor: pointer;
+}
