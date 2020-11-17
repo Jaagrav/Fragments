@@ -28,3 +28,4 @@ I implement [electronjs](https://github.com/electron/electron) into this project
 ##
 
 [Design File](https://www.figma.com/file/YPykm176OSy7rBRm1obGs3/Fragments?node-id=0%3A1) | [Fragments Website](https://fragmentsbycoder.netlify.app)
+Inspired from [Snipp.in](https://snipp.in) by @haxzie developed using VueJS
