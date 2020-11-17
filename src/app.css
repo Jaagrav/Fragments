@@ -54,7 +54,7 @@
     grid-template-columns: 18px 1fr auto;
 }
 
-.treeview .doc:hover, .treeview .dir-name:hover, .treeview .doc.selected {
+.treeview .doc:hover, .treeview .dir-name:hover, .treeview .doc.editorOpen {
     background-color: #171724;
 }
 
@@ -73,7 +73,7 @@
     width: 100%;
 }
 
-.treeview .doc:hover input, .treeview .dir-name:hover input {
+.treeview .doc:hover input, .treeview .dir-name:hover input, .treeview .doc.editorOpen input {
     color: #fff;
 }
 
@@ -166,6 +166,7 @@
 
 .tab.editorOpen {
     border-bottom: 1px solid #76D6FF;
+    cursor: default;
 }
 
 .tab:hover abbr, .tab:hover span, .tab.editorOpen abbr, .tab.editorOpen span {

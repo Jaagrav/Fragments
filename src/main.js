@@ -8,16 +8,7 @@ document.querySelector(".app").innerHTML = `
         <div class="treeview"></div>
     </div>
     <div class="workarea">
-        <div class="tabs">
-            <div class="tab file-system editorOpen">
-                <span>index.html</span>
-                <abbr title="Close" class="fas fa-times"></abbr>
-            </div>
-            <div class="tab file-system">
-                <span>app.js</span>
-                <abbr title="Close" class="fas fa-times"></abbr>
-            </div>
-        </div>
+        <div class="tabs"></div>
         <div class="editors"></div>
     </div>
 `;

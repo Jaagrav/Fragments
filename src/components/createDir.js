@@ -1,4 +1,4 @@
-let createDir = (parentDir) => {
+const createDir = (parentDir) => {
     const dir = `<div class="dir-wrapper">
         <div class="dir-name" onclick="this.nextSibling.nextSibling.classList.toggle('open');this.children[0].classList.toggle('fa-folder');this.children[0].classList.toggle('fa-folder-open');">
             <i class="fas fa-folder"></i>
