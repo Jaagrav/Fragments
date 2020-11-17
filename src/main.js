@@ -10,6 +10,20 @@ if(localStorage.getItem("fragments-store")){
             fontSize: "15pt",
             showPrintMargin: false, 
         });
+
+        try{setupEditor();}
+        catch(e){/*No matter how clean or simple your code might be, there would 
+        always be that one silly javascript error that only a try-catch
+        block can get rid of.*/}
+        aceeditor.session.on('change', function(delta) {
+            setupEditor();
+        });
+
+        function setupEditor() {
+            let lang = editorLanguage(document.querySelector(".treeview .doc."+elem.id+" input").value);
+            aceeditor.session.setMode("ace/mode/"+lang);
+            elem.setAttribute("code",aceeditor.getValue());
+        }
     })
     
 }
