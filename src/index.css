@@ -2,14 +2,15 @@
 
 body {
     margin: 0;
-    box-sizing: border-box;
     background-color: #252535;
     color: #76D6FF;
+    overflow: hidden;
 }
 
 body * {
     font-family: Poppins, sans-serif;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 input[type="text"] {
@@ -20,4 +21,21 @@ input[type="text"] {
 
 input[type="text"]:read-only {
     cursor: pointer;
+}
+
+*::-webkit-scrollbar {
+    appearance: none;
+    background: #252535;
+    height: 8px;
+    width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+    appearance: none;
+    background: #384153;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    appearance: none;
+    background: #6B7382;
 }

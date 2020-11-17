@@ -1,7 +1,7 @@
 if(localStorage.getItem("fragments-store")){
     document.querySelector(".app").innerHTML = localStorage.getItem("fragments-store");
     document.querySelectorAll('.editor').forEach(elem => {
-        elem.innerHTML = elem.getAttribute("code");
+        elem.textContent = elem.getAttribute("code");
         let aceeditor = ace.edit(elem.id);
         aceeditor.setTheme("ace/theme/dracula");
         aceeditor.session.setMode("ace/mode/text");
@@ -11,6 +11,7 @@ if(localStorage.getItem("fragments-store")){
             showPrintMargin: false, 
         });
     })
+    
 }
 else
 document.querySelector(".app").innerHTML = `
@@ -20,7 +21,44 @@ document.querySelector(".app").innerHTML = `
             <abbr title="Create Directory" class="fas fa-folder-plus" onclick="createDir(document.querySelector('.treeview'))"></abbr>
             <abbr title="Create Document" class="fas fa-file-medical" onclick="createDoc(document.querySelector('.treeview'))"></abbr>
         </div>
-        <div class="treeview"></div>
+        <div class="treeview">
+            <center class="no-content-text">
+                Looks like you have no docs stored<br>
+                Click on Create Doc or Directory button 
+            </center>
+        </div>
+    </div>
+    <div class="workarea-preview open">
+        <div class="branding-name">
+            <img src="./src/favicon.png" />
+            <h1>Fragments</h1>
+        </div>
+        <div class="branding-info">
+            Fragments is a prototype of the coding page for <a href="https://xperbycoder.netlify.app" target="_blank">Xper</a> 2.0<br />
+            Here you can write code and save snippets<br />
+        </div>
+        <h3>Create</h3>
+        <div class="create-buttons">
+            <div onclick="createDoc(document.querySelector('.treeview'))">
+                <abbr title="Create Document" class="fas fa-file-medical"></abbr>
+                <span>Create Document</span>
+            </div>
+            <div onclick="createDir(document.querySelector('.treeview'))">
+                <abbr title="Create Directory" class="fas fa-folder-plus"></abbr>
+                <span>Create Directory</span>
+            </div>
+        </div>
+        <h3>Contribute Now</h3>
+        <div class="create-buttons">
+            <div onclick="window.open('https://github.com/Jaagrav/Fragments')">
+                <abbr title="Create Document" class="fab fa-github"></abbr>
+                <span>Source Code</span>
+            </div>
+            <div onclick="window.open('https://github.com/Jaagrav/Fragments/issues')">
+                <abbr title="Create Issue" class="fas fa-code-branch"></abbr>
+                <span>Report Bug or an Issue</span>
+            </div>
+        </div>
     </div>
     <div class="workarea">
         <div class="tabs"></div>
@@ -28,4 +66,5 @@ document.querySelector(".app").innerHTML = `
             <div class="editor editorOpen" id="editor"></div>
         </div>
     </div>
+    <!--<iframe class="output" src="https://wikipedia.com/"></iframe>-->
 `;

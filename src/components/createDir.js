@@ -7,11 +7,12 @@ const createDir = (parentDir) => {
                 <abbr title="Create Directory" class="fas fa-folder-plus" onclick="event.stopPropagation();event.path[3].children[1].classList.add('open');event.path[3].children[0].children[0].classList.remove('fa-folder');event.path[3].children[0].children[0].classList.add('fa-folder-open');createDir(event.path[3].children[1])"></abbr>
                 <abbr title="Create Document" class="fas fa-file-medical" onclick="event.stopPropagation();event.path[3].children[1].classList.add('open');event.path[3].children[0].children[0].classList.remove('fa-folder');event.path[3].children[0].children[0].classList.add('fa-folder-open');createDoc(event.path[3].children[1])"></abbr>
                 <abbr title="Rename" class="fas fa-pen" onclick="event.stopPropagation();event.path[2].querySelector('input').readOnly=false;event.path[2].querySelector('input').focus();event.path[2].querySelector('input').select();"></abbr>
-                <abbr title="Delete" class="fas fa-trash" onclick="event.stopPropagation();event.path[3].remove();"></abbr>
+                <abbr title="Delete" class="fas fa-trash" onclick="event.stopPropagation();event.path[3].remove();checkNeutral();"></abbr>
             </div>
         </div>
         <div class="dir"></div>
     </div>`;
 
     $(parentDir).prepend(dir);
+    checkNeutral();
 }

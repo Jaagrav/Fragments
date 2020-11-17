@@ -40,6 +40,7 @@
 .treeview {
     padding: 10px;
     max-width: 100%;
+    overflow-y: auto;
 }
 
 /**************** Treeview Doc & Dir Name ****************/
@@ -121,11 +122,96 @@
     display: block;
 }
 
+/**************** No-Content-Text ****************/
+
+.no-content-text { 
+    color: #616E88;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
 /**************** workarea ****************/
 
 .workarea {
-    display: grid;
+    display: none;
     grid-template-rows: 45px 1fr;
+}
+
+.workarea.open {
+    display: grid;
+}
+
+/************** Workarea Preview ***************/
+
+.workarea-preview {
+    height: 100%;
+    width: 100%;
+    display: none;
+    padding: 30px;
+}
+
+.workarea-preview.open {
+    display: block;
+}
+
+.workarea-preview .branding-name {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto 1fr;
+}
+
+.workarea-preview .branding-name * {
+    margin: auto 0;
+}
+
+.workarea-preview .branding-name img {
+    height: 50px;
+}
+
+.workarea-preview .branding-info {
+    margin: 25px 20px 0px 20px;
+}
+
+.workarea-preview h3 {
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.workarea-preview .create-buttons {
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-rows: auto auto;
+    margin: 30px 10px;
+}
+
+.workarea-preview .create-buttons div {
+    width: fit-content;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 20px 1fr;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: .2s;
+}
+
+.workarea-preview .create-buttons div:hover {
+    color: white;
+    background-color: #384153;
+}
+
+.workarea-preview .create-buttons div * {
+    margin: auto;
+}
+
+.workarea-preview a {
+    transition: .2s;
+    color: white;
+    border-bottom: 1px solid white;
+}
+.workarea-preview a:hover {
+    padding-bottom: 4px;
 }
 
 /**************** workarea tabs ****************/
@@ -133,6 +219,7 @@
 .tabs {
     border-bottom: 1px solid #384153;
     display: flex;
+    overflow-x: auto;
 }
 
 .tab {
@@ -154,6 +241,7 @@
 .tab abbr {
     padding: 4px 6px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .tab abbr:hover {
@@ -199,6 +287,7 @@
 }
 
 .ace_active-line, .ace_gutter-active-line.ace_gutter-cell  {
+    transition: .2s;
     background: #384153 !important;
 }
 
@@ -216,4 +305,14 @@
 
 .ace_string {
     color: rgb(255, 163, 102) !important;
+}
+
+/**************** Outputs *****************/
+
+.output {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    /* border-left: 1px solid #384153;    */
 }
