@@ -172,3 +172,48 @@
 .tab:hover abbr, .tab:hover span, .tab.editorOpen abbr, .tab.editorOpen span {
     color: #fff;
 }
+
+/*************** Editor ****************/
+
+.editor {
+    height: 100%;
+    width: 100%;
+    background-color: #252535;
+    display: none;
+}
+
+.editor.editorOpen {
+    display: block;
+}
+
+.ace_editor *{
+    font-family: monospace !important;
+}
+
+.ace_gutter-layer {
+    background-color: #252535;
+}
+
+.ace_gutter-cell  {
+    color: #616E88;
+}
+
+.ace_active-line, .ace_gutter-active-line.ace_gutter-cell  {
+    background: #384153 !important;
+}
+
+.ace_identifier {
+    color: rgb(255, 255, 255) !important;
+}
+
+.ace_punctuation.ace_operator {
+    color: rgb(111, 255, 118);
+}
+
+.ace_storage.ace_type {
+    color: rgb(251, 255, 0) !important;
+}
+
+.ace_string {
+    color: rgb(255, 163, 102) !important;
+}
