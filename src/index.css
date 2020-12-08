@@ -32,7 +32,7 @@ input[type="text"]:read-only {
 
 *::-webkit-scrollbar-thumb {
     appearance: none;
-    background: #384153;
+    background: #384153; 
 }
 
 *::-webkit-scrollbar-thumb:hover {
